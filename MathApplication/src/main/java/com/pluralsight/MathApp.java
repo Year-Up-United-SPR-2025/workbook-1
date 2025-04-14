@@ -12,12 +12,13 @@ public class MathApp {
 
         // Question 1:
 
+        System.out.println("Determine whose salary is greater ");
         double bobSalary = 70000;
         double garySalary = 85000;
 
         double highestSalary = Math.max(bobSalary, garySalary);
 
-        System.out.printf("The answer is " + highestSalary);
+        System.out.printf("The greater value is " + highestSalary + " ");
 
 
         /// /////////////////////////////////////
