@@ -30,7 +30,7 @@ public class MathApp {
 
         double vehiclePrice;
 
-        vehiclePrice = Math.max(carPrice, truckPrice);
+        vehiclePrice = Math.min(carPrice, truckPrice);
 
         System.out.println("The lowest value is: " + vehiclePrice);
 
