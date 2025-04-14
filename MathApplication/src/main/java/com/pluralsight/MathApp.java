@@ -74,7 +74,6 @@ public class MathApp {
         double randNum = Math.random();
 
         System.out.println("Mine: Random Number Between 0 and 1: " + randNum);
-        System.out.println("Professors:");
 
     }
 }
