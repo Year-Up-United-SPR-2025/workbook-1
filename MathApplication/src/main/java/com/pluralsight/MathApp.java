@@ -27,11 +27,11 @@ public class MathApp {
         //truckPrice. Set the variables to any value you want.
 
         double carPrice = 28590;
-        double truckprice = 150000;
+        double truckPrice = 150000;
 
         double vehiclePrice;
 
-        vehiclePrice = Math.max(carPrice, truckprice);
+        vehiclePrice = Math.max(carPrice, truckPrice);
 
         System.out.println("The lowest value is: " + vehiclePrice);
 
