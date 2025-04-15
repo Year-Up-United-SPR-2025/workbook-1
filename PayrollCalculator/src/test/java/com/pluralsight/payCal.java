@@ -13,14 +13,27 @@ public class payCal {
 
         // Hours Worked Scan
         System.out.print("Enter hours worked: ");
-        double hoursWorked = scanner.nextDouble();
+        float hoursWorked = scanner.nextFloat();
 
         // Pay Rate Scan
         System.out.print("Enter pay rate: ");
         double payRate = scanner.nextDouble();
 
+
+        double grossPay;  //=hoursWorked * payRate;
+
         // Calculate Gross Pay Scan
-        double grossPay = hoursWorked * payRate;
+        if (hoursWorked <= 40){
+            grossPay = hoursWorked * payRate;
+        }
+        else {
+            float overTimeHours = hoursWorked - 40;
+            double basePay = 40 * payRate;
+            double overtimeRate = payRate * 1.5;
+            double overtimePay = overTimeHours * overtimeRate;
+
+            grossPay = basePay + overtimePay;
+        }
 
         // Display results Scan
         System.out.println("\nEmployee Name: " + name);

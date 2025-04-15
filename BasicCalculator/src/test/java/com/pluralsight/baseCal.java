@@ -34,7 +34,7 @@ public class baseCal {
             int result = number1 / number2;
             System.out.println(number1 + " / " + number2 + " = " + result);
         }
-        scanner.close();
+      scanner.close();
 
     }
 
