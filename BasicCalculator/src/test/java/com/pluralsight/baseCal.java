@@ -24,6 +24,15 @@ public class baseCal {
         if (option == 'M' || option == 'm') {
             int result = number1 * number2;
             System.out.println(number1 + " * " + number2 + " = " + result);
+        } else if (option == 'A' || option == 'a' ) {
+            int result = number1 + number2;
+            System.out.println(number1 + " + " + number2 + " = " + result);
+        } else if (option == 'S' || option == 's') {
+            int result = number1 - number2;
+            System.out.println(number1 + " - " + number2 + " = " + result);
+        } else if (option == 'D' || option == 'd') {
+            int result = number1 / number2;
+            System.out.println(number1 + " / " + number2 + " = " + result);
         }
         scanner.close();
 

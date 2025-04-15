@@ -15,7 +15,7 @@ public class payCal {
         System.out.print("Enter hours worked: ");
         double hoursWorked = scanner.nextDouble();
 
-        // Pay Rate Sacn
+        // Pay Rate Scan
         System.out.print("Enter pay rate: ");
         double payRate = scanner.nextDouble();
 
