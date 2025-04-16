@@ -41,17 +41,17 @@ public class RentCarCal {
         
         //toll prompt 
         System.out.println("Need a Toll Tag (3.95/day) hit Y(es) or N(o): ");
-        boolean toll = scanner.nextLine().equalsIgnoreCase("y");
+        boolean toll = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine();
         
         //gps prompt
         System.out.println("Need a GPS (2.95/day) hit Y(es) or N(o): ");
-        boolean gps = scanner.nextLine().equalsIgnoreCase("y");
+        boolean gps = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine();
         
         //roadside assist prompt
         System.out.println("Need Roadside Assistance (3.95/day) hit Y(es) or N(o): ");
-        boolean roadside = scanner.nextLine().equalsIgnoreCase("y");
+        boolean roadside = scanner.nextLine().equalsIgnoreCase("yes");
         scanner.nextLine();
 
         //age prompt
