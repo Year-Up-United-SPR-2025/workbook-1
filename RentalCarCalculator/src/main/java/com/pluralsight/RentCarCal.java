@@ -56,10 +56,24 @@ public class RentCarCal {
 
         //age prompt
         System.out.println("What is your Age: ");
+        int age = scanner.nextInt();
         scanner.nextLine();
 
         double totalCost = BaseRate * days;
         double choice = 0;
+        double options = 0;
+        if (toll) options += TollTag * days;
+        if (gps) options += GPS * days;
+        if (roadside) options += RoadAssist * days;
 
+        double surcharge = (age < 25) ? BaseRate * BelowAgeSurcharge : 0;
+        double total = BaseRate + options + surcharge;
+
+        System.out.printf("\n--- Rental Estimate ---\n");
+        System.out.printf("Pickup Date: %s\n", pickupDate);
+        System.out.printf("Base: $%.2f\n", BaseRate);
+        System.out.printf("Options: $%.2f\n", options);
+        System.out.printf("Underage Fee: $%.2f\n", surcharge);
+        System.out.printf("Total: $%.2f\n", total);
     }
 }
