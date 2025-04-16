@@ -34,7 +34,7 @@ public class LoadedSandwShop {
         if (Loaded){
             if (sandwichChoice == 1){
                 basePrice += 1.00;
-            } else if (sandwichChoice == 2) {
+            } else {
                 basePrice += 1.75;
             }
         }
