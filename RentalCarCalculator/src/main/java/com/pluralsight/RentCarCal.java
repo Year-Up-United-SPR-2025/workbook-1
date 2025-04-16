@@ -69,9 +69,9 @@ public class RentCarCal {
         double surcharge = (age < 25) ? BaseRate * BelowAgeSurcharge : 0;
         double total = BaseRate + options + surcharge;
 
-        System.out.printf("\n--- Rental Estimate ---\n");
+        System.out.printf("\n--- Rental Cost ---\n");
         System.out.printf("Pickup Date: %s\n", pickupDate);
-        System.out.printf("Base: $%.2f\n", BaseRate);
+        System.out.printf("BasePay: $%.2f\n", BaseRate);
         System.out.printf("Options: $%.2f\n", options);
         System.out.printf("Underage Fee: $%.2f\n", surcharge);
         System.out.printf("Total: $%.2f\n", total);
