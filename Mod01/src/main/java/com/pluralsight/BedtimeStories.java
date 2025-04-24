@@ -1,17 +1,35 @@
 package com.pluralsight;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class BedtimeStories {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner inputScanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        System.out.print("Enter one of the three names of the Books ypu want to read: " + "goldilocks.txt, hansel_and_gretel.txt or mary_had_a_little_lamb.txt\n");
+        String fileName = inputScanner.nextLine();
+
+        File storyFile = new File(fileName);
+
+        try {
+            Scanner fileScanner = new Scanner(storyFile);
+            int lineNumber = 1;
+
+            System.out.println("\nNow Reading: " + fileName + "\n");
+
+            while (fileScanner.hasNextLine()) {
+                String line = fileScanner.nextLine();
+                System.out.printf("%2d: %s%n", lineNumber, line);
+                lineNumber++;
+            }
+
+            fileScanner.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found. Please choose from one of the books provided" + "\n goldilocks.txt, hansel_and_gretel.txt or mary_had_a_little_lamb.txt\n");
         }
+
+        inputScanner.close();
     }
 }
